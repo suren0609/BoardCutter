@@ -7,21 +7,24 @@ interface InputFormProps {
 }
 
 const InputForm: FC<InputFormProps> = ({ onAddCut }) => {
-  const [height, setHeight] = useState<number>(0);
-  const [width, setWidth] = useState<number>(0);
-  const [quantity, setQuantity] = useState<number>(0);
+  const [height, setHeight] = useState<number | "">("");
+  const [width, setWidth] = useState<number | "">("");
+  const [quantity, setQuantity] = useState<number | "">("");
 
   const handleAdd = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const newCut = {
-      height: height / 2,
-      width: width / 2,
-      quantity: quantity,
-    };
-    onAddCut(newCut);
-    setHeight(0);
-    setWidth(0);
-    setQuantity(0);
+    if (height !== "" && width !== "" && quantity !== "") {
+      const newCut = {
+        height: height / 2,
+        width: width / 2,
+        quantity: quantity,
+      };
+      onAddCut(newCut);
+    }
+
+    setHeight("");
+    setWidth("");
+    setQuantity("");
   };
   return (
     <form className={styles.InputForm} onSubmit={handleAdd}>
