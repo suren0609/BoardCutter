@@ -1,0 +1,61 @@
+.InputForm {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  background-color: #5B8A72;
+  padding: 20px;
+
+  .labelAndInput {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+      color: #1E212D;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    input {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      background-color: #1E212D;
+      width: 100px;
+      height: 40px;
+      padding: 5px 10px;
+      font-size: 18px;
+      outline: none;
+      border: 1px solid #1E212D;
+      border-radius: 3px;
+      color: rgb(173, 173, 173);
+    }
+  }
+
+  .addBtn {
+    width: 100px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 20px;
+    background: #1b9c85;
+    color: #1E212D;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

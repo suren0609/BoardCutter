@@ -1,0 +1,27 @@
+.BoardComponent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 30px;
+  background: #1e212d;
+  h2 {
+    color: #5b8a72;
+    font-size: 32px;
+    letter-spacing: 1.5px;
+  }
+  .board {
+    position: relative;
+    background: url("https://i.pinimg.com/originals/1b/b2/1b/1bb21ba9a35b9996806cae59e73c40a2.jpg"),
+      no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+
+    .cut {
+      position: absolute;
+      background: rgba(128, 128, 128, 0.587);
+      border: 1px solid rgb(49, 49, 49);
+    }
+  }
+}
